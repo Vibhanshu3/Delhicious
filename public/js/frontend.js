@@ -66,9 +66,10 @@ if (login != null) {
     login.addEventListener("submit", function (event) {
         event.preventDefault();
         var inputArray = document.getElementsByTagName("input");
+        console.log(inputArray);
         const email = inputArray[0].value;
         const password = inputArray[1].value;
-
+        console.log(email)
         sendLogin(email, password);
 
     })
@@ -87,7 +88,7 @@ if (signup != null) {
     })
 }
 
-if (forgotPassword) {
+if (forgotPassword != null) {
     forgotPassword.addEventListener("submit", function (event) {
         event.preventDefault();
         var inputArray = document.getElementsByTagName("input");
