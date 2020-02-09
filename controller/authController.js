@@ -34,8 +34,8 @@ module.exports.signUp = async function (req, res) {
 module.exports.login = async function (req, res) {
     try {
         const { email, password } = req.body;
-        const user = await userModel.find({ email });
-        let dbPassword = user[0].password;
+        const user = await userModel.findone({ email });
+        let dbPassword = user.password;
         console.log(user)
         if (dbPassword == password) {
             const id = user[0]._id;

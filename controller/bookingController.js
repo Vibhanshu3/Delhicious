@@ -38,9 +38,11 @@ module.exports.createCheckoutSession = async function (req, res) {
 
 module.exports.createNewBooking = async function (email, planName) {
 
-    const user = await userModel.find({ email });
-    const plan = await planModel.find({ planName });
-
+    const user = await userModel.findOne({ email: email });
+    const plan = await planModel.findOne({ name: planName });
+    const planId = req.body.planId;
+    const userId = req.body.userId;
+    
     if (user.userBookedPlansId == undefined) {
         //create bookingOrder
         const order = {
@@ -92,7 +94,7 @@ module.exports.createBooking = async function (req, res) {
                 received: true
             })
         }
-    } catch(err) {
+    } catch (err) {
         response.status(400).send(`Webhook Error: ${err.message}`)
     }
 }
