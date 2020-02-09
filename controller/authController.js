@@ -1,5 +1,5 @@
 const userModel = require("../models/userModel");
-const KEY = require("../configs/config").KEY;
+const KEY = process.env.KEY;
 const jwt = require("jsonwebtoken");
 const Email = require("../Utilites/email")
 
