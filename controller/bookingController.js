@@ -26,8 +26,8 @@ module.exports.createCheckoutSession = async function (req, res) {
             currency: 'usd',
             quantity: 1,
         }],
-        success_url: `${req.protocol}//${req.get("host")}/userPage`,
-        cancel_url: `${req.protocol}//${req.get("host")}/login`,
+        success_url: `${req.protocol}://${req.get("host")}/userPage`,
+        cancel_url: `${req.protocol}://${req.get("host")}/login`,
     });
 
     res.json({
