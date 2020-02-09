@@ -7,7 +7,7 @@ var planRouter = require("./router/planRouter")
 var userRouter = require("./router/userRouter")
 var viewRouter = require("./router/viewRouter")
 var bookingRouter = require("./router/bookingRouter")
-
+var cors = require("cors")
 const { createBooking } = require("./controller/bookingController")
 
 app.post("/login", function (req, res) {
@@ -17,9 +17,8 @@ app.post("/login", function (req, res) {
 
 app.set("view engine", "pug"); // templating engine is pug.
 app.set("views", "views");
-
-app.use(bodyParser.raw({ type: 'application/json' }))
-app.post("/webhook-checkout", createBooking)
+app.use(cors())
+app.post("/webhook-checkout",bodyParser.raw({ type: 'application/json' }), createBooking)
 
 app.use(express.json());
 
