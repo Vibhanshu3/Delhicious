@@ -8,16 +8,18 @@ var userRouter = require("./router/userRouter")
 var viewRouter = require("./router/viewRouter")
 var bookingRouter = require("./router/bookingRouter")
 
-app.post("/login", function (req, res){
+const { createBooking } = require("../controller/bookingController")
+
+app.post("/login", function (req, res) {
     console.log(req.body)
-    
+
 })
 
 app.set("view engine", "pug"); // templating engine is pug.
 app.set("views", "views");
 
-app.use(bodyParser.raw({type:'application/json'}))
-app.post("/webhook-checkout", bookingController.createBooking)
+app.use(bodyParser.raw({ type: 'application/json' }))
+app.post("/webhook-checkout", createBooking)
 
 app.use(express.json());
 
@@ -30,7 +32,7 @@ app.use("/planImage", express.static("public"))
 app.use(cookieParser());
 
 //for quering using form action
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({ extended: true }))
 
 // app.use("")
 app.use("/", viewRouter)
