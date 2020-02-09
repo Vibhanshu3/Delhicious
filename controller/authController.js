@@ -38,7 +38,7 @@ module.exports.login = async function (req, res) {
         let dbPassword = user.password;
         console.log(user)
         if (dbPassword == password) {
-            const id = user[0]._id;
+            const id = user._id;
             const token = await jwt.sign({ id }, KEY);
             res.cookie("jwt", token, { httpOnly: true });
             // res.redirect("/");
