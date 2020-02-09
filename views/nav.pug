@@ -5,14 +5,14 @@ nav
         li.nav-line
             a.white-anchor(href='#link') FOOD DELIVERY
         li.nav-line
-            a.white-anchor(href=`${req.protocol}://${req.get("host")}/plans`) PLAN
+            a.white-anchor(href=`/plans`) PLAN
         li.nav-line
             a.white-anchor(href='#link') HOW IT WORKS
         li.nav-line
             if user
-                a.white-anchor(href=`${req.protocol}://${req.get("host")}/userpage`) #{user.username}
+                a.white-anchor(href=`/userpage`) #{user.username}
             else
-                a.white-anchor(href=`${req.protocol}://${req.get("host")}/login`) SIGNIN
+                a.white-anchor(href=`/login`) SIGNIN
         li.nav-line
             if user
-                a.white-anchor(href=`${req.protocol}://${req.get("host")}/logout`) LOGOUT
+                a.white-anchor(href=`/logout`) LOGOUT
