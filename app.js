@@ -1,5 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 
 const app = express();
 var planRouter = require("./router/planRouter")
@@ -14,6 +15,9 @@ app.post("/login", function (req, res){
 
 app.set("view engine", "pug"); // templating engine is pug.
 app.set("views", "views");
+
+app.use(bodyParser.raw({type:'application/json'}))
+app.post("/webhook-checkout", bookingController.createBooking)
 
 app.use(express.json());
 
@@ -34,7 +38,7 @@ app.use("/plans", planRouter);
 app.use("/users", userRouter);
 app.use("/booking", bookingRouter);
 
-const port = process.env || 3000
+const port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log("Server is listening at port 3000");
 

@@ -143,20 +143,21 @@ if (bookPlan) {
             // If `redirectToCheckout` fails due to a browser or network
             // error, display the localized error message to your customer
             // using `result.error.message`.
-            console.log(result)
-            if(result.error.messsage) {
-                alert("Booking Failed");
-            }else {
-                console.log("in")
-                await axios.post("/booking/createNewBooking", {
-                    userId,
-                    id
-                })
-                if(result.data.success) {
-                    alert("Your booking has been confirmed");
-                    // location.assign("/")
-                }
-            }
+            
+            // console.log(result)
+            // if(result.error.messsage) {
+            //     alert("Booking Failed");
+            // }else {
+            //     console.log("in")
+            //     await axios.post("/booking/createNewBooking", {
+            //         userId,
+            //         id
+            //     })
+            //     if(result.data.success) {
+            //         alert("Your booking has been confirmed");
+            //         // location.assign("/")
+            //     }
+            // }
           });
 
     })

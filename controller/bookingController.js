@@ -3,6 +3,7 @@ const SK = process.env.SK;
 const stripe = require('stripe')(SK);
 const userModel = require("../models/userModel");
 const bookingModel = require("../models/bookingModel");
+const END_POINT_SECRET = process.env.END_POINT_SECRET;
 
 module.exports.createCheckoutSession = async function (req, res) {
 
@@ -17,6 +18,7 @@ module.exports.createCheckoutSession = async function (req, res) {
     //create session npm install stripe
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
+        customer_email: user.email,
         line_items: [{
             name: plan.name,
             description: plan.description,
@@ -28,20 +30,16 @@ module.exports.createCheckoutSession = async function (req, res) {
         cancel_url: `${req.protocol}//${req.get("host")}/login`,
     });
 
-    
-
     res.json({
         session,
         userId
     })
 }
 
-module.exports.createNewBooking = async function (req, res) {
-    const planId = req.body.planId;
-    
-    const userId = req.body.userId;
-    const user = await userModel.findById(userId );
-    const plan = await planModel.findById(planId);
+module.exports.createNewBooking = async function (email, planName) {
+
+    const user = await userModel.find({ email });
+    const plan = await planModel.find({ planName });
 
     if (user.userBookedPlansId == undefined) {
         //create bookingOrder
@@ -75,4 +73,26 @@ module.exports.createNewBooking = async function (req, res) {
 
     }//"5e19d2ecf170ec2b648be38f"
 
+}
+
+module.exports.createBooking = async function (req, res) {
+    const sig = req.headers['stripe-signature'];
+    let event;
+    const endpointSecret = END_POINT_SECRET;
+    try {
+        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+
+        if (event.type == "payment_intent_succeeded") {
+            const userEmail = event.data.object.customer_email;
+            const planName = event.data.object.line_items[0].name;
+
+            await this.createNewBooking(userEmail, planName);
+
+            resizeTo.json({
+                received: true
+            })
+        }
+    } catch(err) {
+        response.status(400).send(`Webhook Error: ${err.message}`)
+    }
 }
