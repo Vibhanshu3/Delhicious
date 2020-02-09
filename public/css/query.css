@@ -1,0 +1,263 @@
+@media only screen and (max-width: 1200px){
+    body {
+        font-size: 90%;
+    }
+
+    .mainContainer {
+        width: 97vw;
+        margin-top: 2rem;
+        display: block
+    }
+
+    .howto-container {
+        display: block;
+    }
+
+    .step-container {
+        display: flex;
+    }
+
+    .icon {
+        color: #2ecc71;
+        margin-bottom: 2rem;
+        padding-right: 38rem;
+    }
+
+    .paragraph {
+        font-family: 'Lato', sans-serif;
+        padding: 0px 6rem;
+        font-size: 1.2rem;
+    }
+    /* padding: 0px 3rem;
+    font-size: 1.2rem */
+
+    .parent-container {
+        display: block;
+        margin-top: 4rem;
+        margin-left: 10rem;
+    }
+
+    .last-container {
+        display: flex;
+    }
+
+    .comment {
+        display: block;
+    }
+
+    .comments {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0,0,0,0.849)), url(../img/foodComment.jpg);
+        background-size: 100% 132%;
+        height: 223vh;
+        background-attachment: fixed;
+        margin-top: 2rem;
+       
+    }
+
+    .fullcard {
+        margin-top: 2rem;
+        display: flex;
+        margin-left: -1rem;
+    }
+    
+    .card {
+        margin: 2rem;
+        height: 47vh;
+       width: 26vw;
+        transition: 0.3s;
+    }
+
+    .btn-sign {
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .paragraph {
+        font-family: 'Lato', sans-serif;
+        padding: 0px 3rem;
+        font-size: 1.2rem;
+    }
+
+    .mainContainer {
+        width: 97vw;
+    
+        margin-top: 2rem;
+        display: block;
+    }
+
+    .androidImg {
+        width: 12rem;
+        margin-top: 3rem;
+        margin-left: 11rem;
+        margin-right: 11rem;
+    }
+
+    .step-container {
+        display: block;
+    }
+
+    .parent-container {
+        display: block;
+        margin-top: 4rem;
+        margin-left: 10rem;
+    }
+
+    .last-container {
+        display: block;
+    }
+
+    .comment {
+        display: block;
+    }
+    .user {
+        display: block;
+    }
+
+    .comments {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0,0,0,0.849)), url(../img/foodComment.jpg);
+        background-size: 100% 132%;
+        height: 223vh;
+        background-attachment: fixed;
+        margin-top: 2rem;
+       
+    }
+
+    .fullcard {
+        margin-top: 2rem;
+        display: flex;
+        margin-left: -1rem;
+    }
+    
+    .card {
+        margin: 2rem;
+        height: 59vh;
+        width: 22vw;
+        transition: 0.3s;
+    }
+
+    .btn-sign {
+        margin-left: 1rem;
+        width: 7rem;
+        padding: 0.6rem;
+    }
+
+    .btn-sign-last {
+        margin-top: 6rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body {
+        background-color: yellow;
+    }
+
+    .mobile-icon {
+        display: block;
+    }
+
+    .navigation {
+        position: static;
+        display: block;
+        justify-content: flex-end;
+        margin-left: 8rem;
+        line-height: 0rem;
+    }
+
+    .nav-line {
+        color: rgb(117, 115, 115);
+        font-size: 1.2rem;
+        font-family: 'Lato', sans-serif;
+        margin-top: 1rem;
+    }
+    .nav-line:after {
+        display:block;
+        content: '';
+        padding-bottom: 1rem;
+        border-bottom: solid 3px #2ecc71;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+      }
+
+      .showcase {
+        
+        left: 2rem
+      }
+
+      .mainHeader {
+        font-size: 2.5rem;
+      }
+
+    .mainContainer {
+        width: 97vw;
+    
+        margin-top: 2rem;
+        display: block;
+    }
+
+    .howto-container {
+        display: block;
+    }
+
+    .icon {
+        margin-left: 6rem;
+    }
+
+    .step-container {
+        display: flex;
+    }
+
+    .parent-container {
+        display: block;
+        margin-top: 4rem;
+        margin-left: 10rem;
+        /* margin-right: 55rem; */
+    }
+
+    .last-container {
+        display: flex;
+    }
+
+    .comment {
+        display: block;
+    }
+    .user {
+        display: flex;
+    }
+
+    .comments {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0,0,0,0.849)), url(../img/foodComment.jpg);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        margin-top: 2rem;
+       
+    }
+
+    .fullcard {
+        margin-top: 2rem;
+        display: block;
+        margin-left: 10rem;
+    }
+
+    .btn-sign-last {
+        margin-top: 4rem;
+        margin-left: 4rem;
+    }
+
+    .btn-sign {
+        margin-left: 4rem;
+    }
+
+    .active {
+        display: none;
+    }
+
+    .card {
+        margin-bottom: 3rem;
+        margin-left: -3rem;
+        width:50vw;
+        height: 16rem;
+
+    }
+}

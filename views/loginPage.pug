@@ -1,0 +1,47 @@
+extend base
+block content
+    article.loginPageHtml
+        .loginPage
+            form.login
+                img.loginImage(src='img/foodBackground.jpg', alt='')
+                .loogin
+                    p.loginHeader Login to continue
+                    .inputBox
+                        input(type='text ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Enter your username
+                    .inputBox
+                        input(type='text ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Enter your password
+                    .helpBox
+                        input(type='checkbox', checked='checked', name='remember')
+                        |  Remember me
+                        span.psw
+                            a.modal-open(href='#modal1') Forgot password?
+                        #modal1.modal
+                            .modal__content
+                                a.modal__close(href='#') ×
+                                .modal__heading
+                                    i.fas.fa-lock.fa-7x
+                                h3 Forgot Passwprd
+                                p You can reset your password here
+                                form.forgotPassword
+                                    .input-group.flex-nowrap.size
+                                        .input-group-prepend
+                                            span#addon-wrapping.input-group-text
+                                                | @
+                                        input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='addon-wrapping')
+                                        button.btnForPas(type='submit') send link
+                    // <a class="btn" type="submit" href="">Login</a>
+                    button.btnLogin(type='submit') Login
+                    // alternative
+                    .altLogin
+                        p.altPara or login in using
+                        .loginIcon
+                            i.fab.fa-facebook.fa-2x.loginIconFb
+                            i.fab.fa-twitter.fa-2x.loginIconTw
+                            i.fab.fa-google.fa-2x.loginIconG
+                    .loginSignUp
+                        p.altPara.alt OR
+                        a.loginToSignUp(href='http://localhost:3000/signUp') Create a new account

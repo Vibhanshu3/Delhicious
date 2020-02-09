@@ -1,0 +1,18 @@
+extend base
+block content
+    article.signUpPageHtml
+        .signUpPage
+            form.updateUser(method='POST' action=`/users/updateUser/${user._id}` enctype="multipart/form-data")
+                img.signUpImage(src='img/foodBackground.jpg', alt='')
+                .siignUp
+                    p.signUpHeader SignUp to continue
+                    .entry
+                        .entry-text
+                            | update Photo
+                        input(type='file', name='photo')
+                    .inputBox
+                        input(type='text ', name='username', value=`${user.username}` ,required='')
+                        label.label-name(for='name')
+                            span.content-name Enter your Username
+                    // <a class="btn" type="submit" href="">Login</a>
+                    button.btnSignUp(type='submit') update user

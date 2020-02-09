@@ -1,0 +1,22 @@
+extend base
+block content
+    article.signUpPageHtml
+        .signUpPage
+            form.signUp
+                img.signUpImage(src='img/foodBackground.jpg', alt='')
+                .siignUp
+                    p.signUpHeader SignUp to continue
+                    h2 photo 
+                        img(src=`${user.photo}`, alt="").img-size
+                    .inputBox
+                        p username
+                        p #{user.username}
+                    .inputBox
+                        p email
+                        p #{user.email}
+                    .inputBox
+                        p userpassword
+                        p #{user.password}
+                    .inputBox
+                        a(href='/updateuser')  update user 
+

@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title #{title}
+
+        //- link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href='css/query.css')
+        link(rel='stylesheet', href='css/loginStyle.css')
+        link(rel='stylesheet', href='css/signUpStyle.css')
+        link(rel="stylesheet", href="./css/forgotPasswordStyle.css")
+
+        script(src='https://kit.fontawesome.com/f8dc1cdc5b.js', crossorigin='anonymous')
+
+    body
+        block topsection
+            include nav
+        block content
+            h1 content Area
+        include footer
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js" crossorigin)
+        script(src="https://js.stripe.com/v3/")
+        script(src="/js/frontend.js")

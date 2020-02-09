@@ -1,0 +1,18 @@
+nav
+    .mobile-icon
+        i.fas.fa-bars.bar
+    ul.navigation.active
+        li.nav-line
+            a.white-anchor(href='#link') FOOD DELIVERY
+        li.nav-line
+            a.white-anchor(href='http://localhost:3000/plans') PLAN
+        li.nav-line
+            a.white-anchor(href='#link') HOW IT WORKS
+        li.nav-line
+            if user
+                a.white-anchor(href='http://localhost:3000/userpage') #{user.username}
+            else
+                a.white-anchor(href='http://localhost:3000/login') SIGNIN
+        li.nav-line
+            if user
+                a.white-anchor(href='http://localhost:3000/logout') LOGOUT

@@ -1,0 +1,26 @@
+extend base
+block content
+    article.signUpPageHtml
+        .signUpPage
+            form.signUp
+                img.signUpImage(src='img/foodBackground.jpg', alt='')
+                .siignUp
+                    p.signUpHeader SignUp to continue
+                    .inputBox
+                        input(type='text ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Enter your Username
+                    .inputBox
+                        input(type='text ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Enter your email
+                    .inputBox
+                        input(type='password ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Create a password
+                    .inputBox
+                        input(type='password ', name='name', required='')
+                        label.label-name(for='name')
+                            span.content-name Confirm your password
+                    // <a class="btn" type="submit" href="">Login</a>
+                    button.btnSignUp(type='submit') SignUp

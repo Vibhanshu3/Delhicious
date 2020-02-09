@@ -1,0 +1,538 @@
+/* selector */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* * is universal selector */
+
+/* power */
+
+/* important > internal styling(inline styling) > id > class > element selector > * > inherited */
+
+/* else use !important */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.849)), url(../img/foodBack.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+.mobile-icon {
+    margin-left: 26rem;
+    padding-top: 2rem;
+    display: none;
+}
+
+.bar {
+    color: white;
+    font-size: 3rem;
+}
+
+.active {
+    display: none;
+}
+
+.navigation {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    /* list-style-type: none; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-line {
+    color: #2ecc71;
+    /* font-size: 1.2rem; */
+    /* margin-right: 2rem; */
+    margin-top: 2rem;
+    /* padding: 0.3rem; */
+    /* padding-bottom: .6rem; */
+    font-family: 'Lato', sans-serif;
+}
+
+.white-anchor {
+    color: #2ecc71;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    position: relative;
+    transition: all .5s
+}
+
+.white-anchor:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+.white-anchor:before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all 0.3s
+}
+
+.white-anchor:hover:before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+.white-anchor:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.white-anchor:hover:after {
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
+
+.logo {
+    margin: 2rem 2rem;
+    width: 10vw;
+    height: 15vh;
+}
+
+.showcase {
+    position: absolute;
+    top: 15rem;
+    left: 12rem;
+}
+
+.mainHeader {
+    top: 15rem;
+    left: 12rem;
+    color: white;
+    font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    /* word-spacing: 0.2rem; */
+}
+
+.btns {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    width: 10rem;
+    text-align: center;
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: #2ecc71;
+    border-radius: 4rem;
+    border: 0.2rem solid #2ecc71;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-empty {
+    margin-right: 2rem;
+    color: #2ecc71;
+    background-color: transparent;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.btn-empty:hover {
+    color: white;
+    background-color: #2ecc71;
+}
+
+.subheader {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    top: 10rem;
+    left: 20rem;
+}
+
+article {
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+h2::after {
+    content: "";
+    border-width: 0.1rem;
+    color: #2ecc71;
+    display: block;
+    border-bottom: solid;
+    margin: 0px 36rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.paragraph {
+    font-family: 'Lato', sans-serif;
+    padding: 0px 20rem;
+    font-size: 1.2rem;
+}
+
+.mainContainer {
+    width: 97vw;
+    margin-top: 2rem;
+    display: flex
+}
+
+.container {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+.icon {
+    color: #2ecc71;
+    margin-bottom: 2rem;
+    padding-right: 4rem;
+}
+
+.subparagraph {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    line-height: 1.5rem;
+}
+
+.howto-container {
+    display: flex;
+}
+
+.androidImg {
+    width: 15%;
+    margin-top: 3rem;
+    margin-left: 16rem;
+    margin-right: 11rem;
+}
+
+.step-container div {
+    color: #2ecc71;
+    height: 4rem;
+    width: 4rem;
+    border-style: solid;
+    border-color: #2ecc71;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    border-width: 0.1rem;
+}
+
+.step-container {
+    display: flex;
+}
+
+.step-container:first-child {
+    margin-top: 4rem;
+}
+
+.howto-para {
+    /* margin-top: 0.5rem; */
+    font-family: 'Lato', sans-serif;
+}
+
+.step-container img {
+    margin-right: 1rem;
+    width: 9rem;
+    margin-top: 2rem;
+}
+
+.parent-container {
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 10rem;
+}
+
+.last-container {
+    display: flex;
+}
+
+.country {
+    width: 14rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+
+.child-container {
+    margin-right: 2rem;
+}
+
+.sub-container {
+    margin-top: 1rem;
+}
+
+.icon2 {
+    color: #2ecc71;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+}
+
+.comments {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.849)), url(../img/foodComment.jpg);
+    background-size: 100% 132%;
+    height: 80vh;
+    background-attachment: fixed;
+    margin-top: 2rem;
+}
+
+.comment {
+    display: flex;
+}
+
+.user {
+    display: flex;
+}
+
+.user-img {
+    height: 3rem;
+    width: 3rem;
+    margin-top: 1rem;
+    border-radius: 50%;
+    margin-left: 3rem;
+}
+
+.comment-para::before {
+    content: "\201C";
+    font-size: 400%;
+    display: block;
+}
+
+.comment-para {
+    color: white;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.comment-para-name {
+    color: white;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-family: 'Lato', sans-serif;
+    margin-top: 2rem;
+}
+
+.comment-para:first-child {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.user .comment-para {
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+
+.comments h2 {
+    color: white;
+}
+
+.sticky {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 1rem;
+    position: fixed;
+}
+
+.sticky ul li .white-anchor {
+    color: black;
+}
+
+.form {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+/* .first {
+    display: inline;
+} */
+
+.label1 {
+    margin-right: 11.9rem;
+    font-size: 1.4rem;
+}
+
+.input1 {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 23rem;
+}
+
+.label2 {
+    margin-right: 11.9rem;
+    font-size: 1.4rem;
+}
+
+.input2 {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 23rem;
+}
+
+.label3 {
+    margin-right: 3.3rem;
+    font-size: 1.4rem;
+}
+
+.input3 {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 23rem;
+}
+
+.label4 {
+    margin-right: 7.5rem;
+    margin-left: -17.5rem;
+    font-size: 1.4rem;
+}
+
+.input4 {
+    font-size: 1.4rem;
+}
+
+.label5 {
+    margin-top: 1rem;
+    margin-right: 11.9rem;
+    font-size: 1.4rem;
+    margin-right: 7.2rem;
+}
+
+.input5 {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 23rem;
+}
+
+.review {
+    display: inline-flex;
+}
+
+.btn-send {
+    width: 7rem;
+    padding: 0.5rem;
+    margin-right: 0.4rem;
+    margin-top: 1rem;
+}
+
+.price {
+    background: rgba(1, 1, 1, 0.2);
+}
+
+.fullcard {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.001);
+    margin: 2rem;
+    background: white;
+    border-radius: 11%;
+    height: 46vh;
+    width: 19vw;
+    /* /* transition: 0 */
+    transition: 0.3s;
+}
+
+.tag {
+    font-family: 'Lato', sans-serif;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    color: #2ecc71;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.facility {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+.btn-sign {
+    margin: 1.5rem 3rem;
+    /* 
+    margin-left: 3rem;
+    margin-top: 0.5rem; */
+}
+
+.btn-sign-last {
+    margin-top: 4rem;
+}
+
+/* #line {
+    color:yellow;
+}
+
+.box li {
+    color:red;
+} */
+
+.img-size {
+    height: 23vh;
+    width: 23vw;
+    border-radius: 50%;
+}

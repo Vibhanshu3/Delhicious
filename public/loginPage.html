@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/loginStyle.css">
+    <link rel="stylesheet" href="./css/forgotPasswordStyle.css">
+
+    <script src="https://kit.fontawesome.com/f8dc1cdc5b.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <article class="loginPageHtml">
+        <div class="loginPage">
+            <form class="login">
+                <img src="img/foodBackground.jpg" class="loginImage" alt="">
+                <div class="loogin">
+                    <p class="loginHeader">Login to continue</p>
+                    <div class="inputBox">
+                        <input type="text " name="name" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Enter your username</span>
+                        </label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text " name="name" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Enter your password</span>
+                        </label>
+                    </div>
+                    <div class="helpBox">
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <span class="psw"> <a href="#modal1" class="modal-open">Forgot password?</a></span>
+                        <div class="modal" id="modal1">
+                            <div class="modal__content">
+                                <a href="#" class="modal__close">&times</a>
+                                <div class="modal__heading"><i class="fas fa-lock fa-7x"></i></div>
+                                <h3>Forgot Passwprd</h3>
+                                <p>You can reset your password here</p>
+                                <form class="forgotPassword">
+                                    <div class="input-group flex-nowrap size">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                @ </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username"
+                                            aria-label="Username" aria-describedby="addon-wrapping">
+                                        <button class="btnForPas" type="submit">send link</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <a class="btn" type="submit" href="">Login</a> -->
+
+                    <button class="btnLogin" type="submit">Login</button>
+
+                    <!-- alternative -->
+                    <div class="altLogin">
+                        <p class="altPara">or login in using</p>
+                        <div class="loginIcon">
+                            <i class="fab fa-facebook fa-2x loginIconFb"></i>
+                            <i class="fab fa-twitter fa-2x loginIconTw"></i>
+                            <i class="fab fa-google fa-2x loginIconG"></i>
+                        </div>
+                    </div>
+
+                    <div class="loginSignUp">
+                        <p class="altPara alt">OR</p>
+                        <a class="loginToSignUp" href="http://localhost:3000/signUp">Create a new account</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </article>
+
+</body>
+
+</html>

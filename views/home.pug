@@ -1,0 +1,165 @@
+extends base
+block topsection
+    include header
+block content
+    article.feature
+        h2 Get Food Fast Not Fast Food
+        p.paragraph
+            | Hello, we're Omnifood, your new premium food delivery service.
+            | We know you're always busy.No time for cooking.
+            | So let us take care of that,we're really good at it,we promise
+        .mainContainer
+            #link.container
+                i.far.fa-calendar-alt.fa-3x.icon
+                h3 UP TO 365 DAYS/YEAR
+                p.subparagraph
+                    | Never cook again! We really mean that. Our subscription plans include up to 365
+                    | days/year coverage. You can also choose to order more flexibly if that's your style.
+            #link.container
+                i.fas.fa-truck.fa-3x.icon
+                h3 READY IN 20 MINUTES
+                p.subparagraph
+                    | You're only twenty minutes away from your delicious and super healthy meals
+                    | delivered right to your home. We work with the best chefs in each town to ensure that you're 100%
+                    | happy.
+            #link.container
+                i.fas.fa-carrot.fa-3x.icon
+                h3 100% ORGANIC
+                p.subparagraph
+                    | All our vegetables are fresh, organic and local. Animals are raised without
+                    | added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+            #link.container
+                i.fas.fa-sort-alpha-down.fa-3x.icon
+                h3 ORDER ANYTHING
+                p.subparagraph
+                    | We don't limit your creativity, which means you can order whatever you feel
+                    | like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
+    article
+        h2 HOW IT WORKS - SIMPLE AS 1, 2, 3
+        .howto-container
+            img.androidImg(src='/img/android.jpeg', alt='androidimage', srcset='')
+            .steps-container
+                .step-container
+                    div 1
+                    p.howto-para
+                        | Chose the subscription plan that best fits your 
+                        br
+                        |  needs and sign up today
+                .step-container
+                    div 2
+                    p.howto-para
+                        | Order your delicious meal using our mobile app or 
+                        br
+                        |  website. Or you can
+                        |                         even call us!
+                .step-container
+                    div 3
+                    p.howto-para
+                        | Enloy your meal after less tha 20 minutes,. See you 
+                        br
+                        |  the next time!
+                .step-container
+                    img.downloadApp(src='/img/appledownload.png', alt='androidimage', srcset='')
+                    img.downloadApp(src='/img/googleDownload.jpeg', alt='androidimage', srcset='')
+    article
+        h2 WE'R CURRENTLY IN THESE CITIES
+        .parent-container
+            .child-container
+                img.country(src='/img/lisbon.jpg', alt='')
+                h3 LISBON
+                .sub-container
+                    .last-container
+                        i.fas.fa-user.fa-1x.icon2
+                        p.howto-para 1600+ happy eaters
+                    .last-container
+                        i.fas.fa-chess-queen.fa-1x.icon2
+                        p.howto-para 60+ top chefs
+                    .last-container
+                        i.fab.fa-twitter.fa-1x.icon2
+                        p.howto-para @Omnifood_lx
+            .child-container
+                img.country(src='/img/sanfrancisco.jpg', alt='')
+                h3 SAN FRANCISCO
+                .sub-container
+                    .last-container
+                        i.fas.fa-user.fa-1x.icon2
+                        p.howto-para 1600+ happy eaters
+                    .last-container
+                        i.fas.fa-chess-queen.fa-1x.icon2
+                        p.howto-para 60+ top chefs
+                    .last-container
+                        i.fab.fa-twitter.fa-1x.icon2
+                        p.howto-para @Omnifood_sf
+            .child-container
+                img.country(src='/img/berlin.jpg', alt='')
+                h3 BERLIN
+                .sub-container
+                    .last-container
+                        i.fas.fa-user.fa-1x.icon2
+                        p.howto-para 1600+ happy eaters
+                    .last-container
+                        i.fas.fa-chess-queen.fa-1x.icon2
+                        p.howto-para 60+ top chefs
+                    .last-container
+                        i.fab.fa-twitter.fa-1x.icon2
+                        p.howto-para @Omnifood_berlin
+            .child-container
+                img.country(src='/img/london.jpg', alt='')
+                h3 LONDON
+                .sub-container
+                    .last-container
+                        i.fas.fa-user.fa-1x.icon2
+                        p.howto-para 1600+ happy eaters
+                    .last-container
+                        i.fas.fa-chess-queen.fa-1x.icon2
+                        p.howto-para 60+ top chefs
+                    .last-container
+                        i.fab.fa-twitter.fa-1x.icon2
+                        p.howto-para @Omnifood_london
+    article.comments
+        h2.last OUR CUSTOMERS CAN'T LIVE WITHOUT US
+        .comment
+            .sub-comment
+                p.comment-para
+                    | Omnifood is justawesome! I just launched a 
+                    br
+                    |                     startup which leaves me with no time for 
+                    br
+                    |                     cooking, so Omnifood is a life-saver. Now 
+                    br
+                    |                     that I got used to it, I couldn't live without my 
+                    br
+                    |                     daily meals!
+                .user
+                    img.user-img(src='img/user1.jpg', alt='')
+                    p.comment-para-name Alberto Duncan
+            .sub-comment
+                p.comment-para
+                    | Inexpensive, healthy and great-tasting meals, 
+                    br
+                    |                     delivered right to my home. We have lots of 
+                    br
+                    |                     food delivery here in Lisbon, but no one 
+                    br
+                    |                     comes even close to Omnifood. Me and my 
+                    br
+                    | family are so in love
+                .user
+                    img.user-img(src='img/user2.jpg', alt='')
+                    p.comment-para-name Alberto Duncan
+            .sub-comment
+                p.comment-para
+                    | I was looking for a quick and easy food 
+                    br
+                    | delivery service in San Francisco. I
+                    |                     tried a lot 
+                    br
+                    |                     of them and ended up with Omnifood. Best 
+                    br
+                    |                     food delivery service in the Bay Area. Keep 
+                    br
+                    |                     up the great work
+                .user
+                    img.user-img(src='img/user3.jpg', alt='')
+                    p.comment-para-name Alberto Duncan
+    include plancontainer

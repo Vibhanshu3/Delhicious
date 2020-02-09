@@ -1,0 +1,17 @@
+.card
+    p.tag #{plan.name}
+    h4 $#{plan.price} / #{plan.duration}
+    p.tag That's only $13.30 per meal
+    .facility
+        i.fas.fa-check-circle.icon2
+        p.howto-para 1 meal every day
+    .facility
+        i.fas.fa-check-circle.icon2
+        p.howto-para order 24/7
+    .facility
+        i.fas.fa-check-circle.icon2
+        p.howto-para Acces to newest creations
+    .facility
+        i.fas.fa-check-circle.icon2
+        p.howto-para Free delivery
+    a.btn.btn-sign.bookPlan(href=`http://localhost:3000/plans/${plan["_id"]}`) Sign up now
