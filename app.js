@@ -34,7 +34,7 @@ app.use("/plans", planRouter);
 app.use("/users", userRouter);
 app.use("/booking", bookingRouter);
 
-
+const port = process.env || 3000
 app.listen(port, () => {
     console.log("Server is listening at port 3000");
 
