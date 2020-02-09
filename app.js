@@ -1,6 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");  //for webhook-checkout
 
 const app = express();
 var planRouter = require("./router/planRouter")
@@ -8,7 +8,7 @@ var userRouter = require("./router/userRouter")
 var viewRouter = require("./router/viewRouter")
 var bookingRouter = require("./router/bookingRouter")
 
-const { createBooking } = require("../controller/bookingController")
+const { createBooking } = require("./controller/bookingController")
 
 app.post("/login", function (req, res) {
     console.log(req.body)
